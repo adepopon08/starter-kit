@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('content')
     <div class="bg-primary pt-10 pb-21"></div>
     <div class="container-fluid mt-n22 px-6">

@@ -24,13 +24,13 @@
 <body class="bg-light">
     <div id="db-wrapper">
         <!-- sidebar -->
-        @include('layouts.sidebar')
+        @include('admin.layouts.sidebar')
         <!-- end sidebar -->
         <!-- Page content -->
         <div id="page-content">
             <div class="header @@classList">
                 <!-- navbar -->
-                @include('layouts.navbar')
+                @include('admin.layouts.navbar')
                 <!-- end navbar -->
             </div>
             <!-- Container fluid -->
