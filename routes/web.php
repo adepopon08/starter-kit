@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 
-Route::prefix('admin')
+Route::prefix('admin')->middleware(['auth', 'roles:admin,user'])
     ->name('admin.')
     ->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'); //{{ route('admin.dashbooard') }}
