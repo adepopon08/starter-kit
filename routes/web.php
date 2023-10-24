@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +27,9 @@ Route::prefix('admin')->middleware(['auth', 'roles:admin,user'])
     ->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'); //{{ route('admin.dashbooard') }}
         //Route::get('user', [UserController::class, 'index'])->name('user');
-        Route::resource('/user', UserController::class);
+        Route::resource('user', UserController::class);
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::resource('roles', RoleController::class);
     });
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');

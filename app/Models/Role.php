@@ -12,6 +12,11 @@ class Role extends Model
         'role',
     ];
 
+    public function scopeSearch($query, $search)
+    {
+        $query->where('role', 'like', '%' . $search . '%');
+    }
+
     public function role()
     {
         return $this->hasMany(User::class, 'role_id');
