@@ -35,6 +35,11 @@
                                 Role
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ route('admin.user.index') }}">
+                                User
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>

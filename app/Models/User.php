@@ -43,6 +43,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function scopeSearch($query, $search)
+    {
+        $query->where('name', 'like', '%' . $search . '%');
+    }
+
     public function role()
     {
         return $this->belongsTo(Role::class, 'role_id');
