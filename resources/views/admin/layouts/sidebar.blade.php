@@ -43,6 +43,13 @@
                     </ul>
                 </div>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link has-arrow" href="{{ route('admin.datatable') }}">
+                    <i data-feather="table" class="nav-icon icon-xs me-2"></i> Datatable
+                </a>
+
+            </li>
         </ul>
     </div>
 </nav>
