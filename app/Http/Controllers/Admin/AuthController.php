@@ -31,4 +31,9 @@ class AuthController extends Controller
             'email' => 'The provide credentials do not match our records.',
         ])->onlyInput('email');
     }
+
+    public function register()
+    {
+        return view('admin.pages.auth.register');
+    }
 }

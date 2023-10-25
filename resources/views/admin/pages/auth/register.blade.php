@@ -17,7 +17,7 @@
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/theme.min.css') }}">
-    <title>Sign In | MaTa K-One</title>
+    <title>Sign Up | MaTa K-One</title>
 </head>
 
 <body class="bg-light">
@@ -35,13 +35,19 @@
                                     src="{{ asset('template/assets/images/brand/logo/logo-primary.svg') }}"
                                     class="mb-2" alt=""></a>
                             <p class="mb-6">Please enter your user information.</p>
+
                         </div>
                         <!-- Form -->
-                        <form action="{{ route('customLogin') }}" method="POST">
-                            @csrf
+                        <form>
                             <!-- Username -->
                             <div class="mb-3">
-                                <label for="email" class="form-label">Username or email</label>
+                                <label for="username" class="form-label">User Name</label>
+                                <input type="text" id="username" class="form-control" name="username"
+                                    placeholder="User Name" required="">
+                            </div>
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
                                 <input type="email" id="email" class="form-control" name="email"
                                     placeholder="Email address here" required="">
                             </div>
@@ -51,27 +57,35 @@
                                 <input type="password" id="password" class="form-control" name="password"
                                     placeholder="**************" required="">
                             </div>
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="confirm-password" class="form-label">Confirm
+                                    Password</label>
+                                <input type="password" id="confirm-password" class="form-control" name="password"
+                                    placeholder="**************" required="">
+                            </div>
                             <!-- Checkbox -->
-                            <div class="d-lg-flex justify-content-between align-items-center
-                  mb-4">
+                            <div class="mb-3">
                                 <div class="form-check custom-checkbox">
-                                    <input type="checkbox" class="form-check-input" id="rememberme">
-                                    <label class="form-check-label" for="rememberme">Remember
-                                        me</label>
+                                    <input type="checkbox" class="form-check-input" id="agreeCheck">
+                                    <label class="form-check-label" for="agreeCheck"><span class="fs-5">I agree to the
+                                            <a href="terms-condition-page.html">Terms of
+                                                Service </a>and
+                                            <a href="terms-condition-page.html">Privacy Policy.</a></span></label>
                                 </div>
-
                             </div>
                             <div>
                                 <!-- Button -->
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">Sign
-                                        in</button>
+                                    <button type="submit" class="btn btn-primary">
+                                        Create Free Account
+                                    </button>
                                 </div>
 
                                 <div class="d-md-flex justify-content-between mt-4">
                                     <div class="mb-2 mb-md-0">
-                                        <a href="{{ route('register') }}" class="fs-5">Create An
-                                            Account </a>
+                                        <a href="{{ route('login') }}" class="fs-5">Already
+                                            member? Login </a>
                                     </div>
                                     <div>
                                         <a href="forget-password.html"
@@ -82,13 +96,13 @@
                                 </div>
                             </div>
 
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Scripts -->
     <!-- Libs JS -->
     <script src="{{ asset('template/assets/libs/jquery/dist/jquery.min.js') }}"></script>
@@ -101,9 +115,6 @@
     <script src="{{ asset('template/assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js') }}"></script>
     <script src="{{ asset('template/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js') }}">
     </script>
-
-
-
 
     <!-- Theme JS -->
     <script src="{{ asset('template/assets/js/theme.min.js') }}"></script>
