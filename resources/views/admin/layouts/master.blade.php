@@ -15,6 +15,7 @@
     <link href="{{ asset('template/assets/libs/dropzone/dist/dropzone.css') }}" rel="stylesheet">
     <link href="{{ asset('template/assets/libs/@mdi/font/css/materialdesignicons.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('template/assets/libs/prismjs/themes/prism-okaidia.css') }}" rel="stylesheet">
+    @include('components.css-datatable')
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/theme.min.css') }}">
@@ -55,6 +56,8 @@
     </script>
     <!-- Theme JS -->
     <script src="{{ asset('template/assets/js/theme.min.js') }}"></script>
+    @include('components.script-datatable')
+    @stack('scripts')
 
 
 
